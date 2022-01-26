@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CoinFlip : MonoBehaviour
 {
+    //Script para que el objeto moneda gire sobre si mismo
+
     Rigidbody m_Rigidbody;
     Vector3 m_EulerAngleVelocity;
 

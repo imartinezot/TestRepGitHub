@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    //Cuando la salud del objeto que lleva este script se actualiza llama a esta funcion
+    //para que se actualice visualmente
     public Slider slider;
-    // Start is called before the first frame update
-
 
     public void SetHealth(int health)
     {

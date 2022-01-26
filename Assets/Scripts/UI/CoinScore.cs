@@ -10,14 +10,12 @@ public class CoinScore : MonoBehaviour
 
     public int keys = 0;
     public Text KeysText;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    //variables que se muestran en la interfaz
     void Update()
     {
+        coins = ObjSingleton.ObjS.Coins;
+        keys = ObjSingleton.ObjS.Keys;
         if (coins !=null)
         {
             CoinText.text = coins + "/8";
@@ -28,12 +26,14 @@ public class CoinScore : MonoBehaviour
         }
 
     }
-    public void puntoCoins()
-    {
-        coins = coins + 1;
-    }
-    public void puntoKeys()
-    {
-        keys = keys + 1;
-    }
+    //get manager llama a estas funciones cuando encuentra el item
+    //AHORA SE HACE DESDE EL SINGLETON ObjSingleton
+    //public void puntoCoins()
+    //{
+    //    coins = coins + 1;
+    //}
+    //public void puntoKeys()
+    //{
+    //    keys = keys + 1;
+    //}
 }

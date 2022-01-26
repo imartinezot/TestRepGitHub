@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyFlip : MonoBehaviour
 {
+    //Script para que el objeto llave gire sobre si mismo
     Rigidbody m_Rigidbody;
     Vector3 m_EulerAngleVelocity;
 
