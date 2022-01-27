@@ -31,6 +31,10 @@ public class PlayerHealth : MonoBehaviour
                 SceneManager.LoadScene("SampleScene");
             }
         }
+        if (PlayerHealthState > 100)
+        {
+            PlayerHealthState = 100;
+        }
     }
     //desactiva camara, desactiva movimiento, mensaje de "has muerto"
     public void Die()

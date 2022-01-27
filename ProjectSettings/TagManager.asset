@@ -9,6 +9,7 @@ TagManager:
   - Detection
   - finish
   - Obj
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
