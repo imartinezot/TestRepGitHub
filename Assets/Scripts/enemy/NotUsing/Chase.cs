@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chase : MonoBehaviour
 {
+    //AHORA SE HACE DESDE OTRO SCRIPT
     //recorrido 1 y 2 del enemigo;
     public GameObject enemigo;
     public bool MoveraPlayer = false;

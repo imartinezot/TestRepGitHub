@@ -19,12 +19,12 @@ public class DoorManager : MonoBehaviour
     //cuando se consigue una llave la puerta correspondiente se va hacia arriba y se abre
     void Update()
     {
-        if (ObjSingleton.ObjS.Keys == 1)
+        if (ObjSingleton.ObjS.Keys >= 1)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
 
-        if (ObjSingleton.ObjS.Keys == 2)
+        if (ObjSingleton.ObjS.Keys >= 2)
         {
             Door2tr.position = Vector3.MoveTowards(Door2tr.position, target2.position, speed * Time.deltaTime);
         }

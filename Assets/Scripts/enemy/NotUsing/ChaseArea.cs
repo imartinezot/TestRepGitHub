@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChaseArea : MonoBehaviour
 {
+    //AHORA SE HACE DESDE OTRO SCRIPT
     public GameObject ChaseAreas;
     public GameObject enemigo;
     // Start is called before the first frame update

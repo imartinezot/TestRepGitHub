@@ -25,7 +25,9 @@ public class Bala : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.GetComponent<PlayerHealth>().PlayerHealthState -= Damage;
-            Destroy(this.gameObject);
+
+            //se desactiva para luego poder seguir usandolo en el pool
+            gameObject.SetActive(false);
         }
         //if (other.gameObject.tag != "Player")
         //{
@@ -36,6 +38,7 @@ public class Bala : MonoBehaviour
     IEnumerator EspDest()
     {
         yield return new WaitForSeconds(2f);
-        Destroy(this.gameObject);
+        //se desactiva para luego poder seguir usandolo en el pool
+        gameObject.SetActive(false);
     }
 }

@@ -25,12 +25,13 @@ public class PlayerHealth : MonoBehaviour
         if (PlayerHealthState <=0)
         {
             tiempo = tiempo + Time.deltaTime;
-            Die();
+            Die();//reinicia el bucle de juego
             if (tiempo >=tiempoMuerto)
             {
                 SceneManager.LoadScene("SampleScene");
             }
         }
+        //si coge una pocion de vida que supere su salud actual vuelve al limite
         if (PlayerHealthState > 100)
         {
             PlayerHealthState = 100;

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     //Cuando la salud del objeto que lleva este script se actualiza llama a esta funcion
-    //para que se actualice visualmente
+    //para que se actualice visualmente, se usa para el player
     public Slider slider;
 
     public void SetHealth(int health)

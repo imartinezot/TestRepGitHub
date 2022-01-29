@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ObjectData", menuName = "Object Data", order = 51)]
 public class ObjectData : ScriptableObject
 {
+    //Plantilla para crear un objeto
+    //cada uno tendra su nombre, icono, y el tipo que es
     public enum TIPO { Key, Coin, HealthPotion, StaminaPotion, Door}
 
     [SerializeField]

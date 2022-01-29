@@ -14,6 +14,7 @@ public class CoinScore : MonoBehaviour
     //variables que se muestran en la interfaz
     void Update()
     {
+        //Recoge el valor de las variables monedas y llaves del singleton y los muestra en la UI
         coins = ObjSingleton.ObjS.Coins;
         keys = ObjSingleton.ObjS.Keys;
         if (coins !=null)
