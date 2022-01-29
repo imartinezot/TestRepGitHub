@@ -336,6 +336,7 @@ public class Attack : State
     float rotationSpeed = 2.0f;
     //Sonido de disparo
     AudioSource shoot;
+    enemy Senemy;
     //Usamos el constructor de la clase STATE para pasar todas las referencias necesarias para la consecución correcta de este estado
     public Attack(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player) : base(_npc, _agent, _anim, _player)
     {
@@ -343,6 +344,7 @@ public class Attack : State
         name = STATE.ATTACK;
         //Para obtener el sonido de disparo
         shoot = _npc.GetComponent<AudioSource>();
+        Senemy = _npc.GetComponent<enemy>();
     }
 
     //Sobreescribimos el evento Enter de ese estado 
@@ -354,6 +356,9 @@ public class Attack : State
         agent.isStopped = true;
         //Reproducimos el sonido de disparo
         shoot.Play();
+        Senemy.EstadoDisparar = true;
+        Senemy.disparar = true;
+
         //Llamamos al método Enter de la clase State
         base.Enter();
     }
@@ -386,6 +391,8 @@ public class Attack : State
         anim.ResetTrigger("isShooting");
         //Paramos el sonido de disparo
         shoot.Stop();
+        Senemy.EstadoDisparar = false;
+        Senemy.disparar = false;
         //Llamamos al método Exit de la clase State
         base.Exit();
     }
